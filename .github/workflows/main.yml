@@ -30,24 +30,37 @@ jobs:
         run: npm run docs:build
         
         #将文件上传至云服务器  
-      - name: ssh-scp-deploy
-        uses: appleboy/scp-action@master
-        with:
+      #- name: ssh-scp-deploy
+        #uses: appleboy/scp-action@master
+        #with:
           #本地打包后的文件目录
           #local: docs/.vitepress/dist
           #上传至远程服务器的目标目录
           #remote: /www/wwwroot/www.lzzftt.icu/dist
           #远程服务器的地址
-          host: ${{ secrets.REMOTE_HOST }}
+         # host: ${{ secrets.REMOTE_HOST }}
           #远程服务器的用户名
-          username: ${{ secrets.USER_NAME }}
+          #username: ${{ secrets.USER_NAME }}
           #远程服务器的密钥（与密码二者选其一）
-          key: ${{ secrets.SSH_KEY }}
+          #key: ${{ secrets.SSH_KEY }}
           #上传后执行的脚本
           #post_upload: sudo nginx -s reload
+          #port: 22
+          #source: "docs/.vitepress/dist"
+
+          #target: "/www/wwwroot/www.lzzftt.icu/dist"
+      - name: ssh-scp-deploy
+        uses: marcodallasanta/ssh-scp-deploy@v1.2.0
+        with:
+          #本地打包后的文件目录
+          local: 'docs/.vitepress/dist'
+          #上传至远程服务器的目标目录
+          remote: '/www/wwwroot/www.lzzftt.icu/dist'  
+          #远程服务器的地址
+          host: ${{ secrets.REMOTE_HOST }}
+          #远程服务器的用户名
+          user: ${{ secrets.USER_NAME }}
+          #远程服务器的密钥（与密码二者选其一）
+          key: ${{ secrets.SSH_KEY }}
           port: 22
-          source: "docs/.vitepress/dist"
-
-          target: "/www/wwwroot/www.lzzftt.icu/dist"
           
-
