@@ -48,3 +48,5 @@ jobs:
           port: 22
           source: "docs/.vitepress/dist"
           target: "/www/wwwroot/www.lzzftt.icu/dist"
+          
+
