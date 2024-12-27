@@ -46,7 +46,9 @@ jobs:
           #上传后执行的脚本
           #post_upload: sudo nginx -s reload
           port: 22
-          source: "docs/.vitepress/dist"
+          #source: "docs/.vitepress/dist"
+          
+          source: ""
           target: "/www/wwwroot/www.lzzftt.icu/dist"
           
 
