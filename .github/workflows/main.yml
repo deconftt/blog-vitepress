@@ -18,19 +18,20 @@ jobs:
         
         #设置环境为nodejs 18
       - name: Use Node.js 18
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4.1.0
         with:
-          node-version: '18.17.1'
+          node-version: '18.x'
           
         #安装模块并打包项目 
+      - name: install dep
+        run: npm install
+        
       - name: Build Project
-        run: |
-          npm install
-          npm run build
+        run: npm run build
         
         #将文件上传至云服务器  
       - name: ssh-scp-deploy
-        uses: marcodallasanta/ssh-scp-deploy@v1.2.0
+        uses: appleboy/scp-action@master
         with:
           #本地打包后的文件目录
           local: docs/.vitepress/dist
@@ -39,8 +40,11 @@ jobs:
           #远程服务器的地址
           host: ${{ secrets.REMOTE_HOST }}
           #远程服务器的用户名
-          user: ${{ secrets.USER_NAME }}
+          username: ${{ secrets.USER_NAME }}
           #远程服务器的密钥（与密码二者选其一）
           key: ${{ secrets.SSH_KEY }}
           #上传后执行的脚本
-          post_upload: sudo nginx -s reload
+          #post_upload: sudo nginx -s reload
+          port: 22
+          source: "docs/.vitepress/dist"
+          target: "/www/wwwroot/www.lzzftt.icu/dist"
