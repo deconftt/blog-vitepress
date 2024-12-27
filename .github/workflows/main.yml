@@ -27,7 +27,7 @@ jobs:
         run: npm install
         
       - name: Build Project
-        run: npm run build
+        run: npm run docs:build
         
         #将文件上传至云服务器  
       - name: ssh-scp-deploy
