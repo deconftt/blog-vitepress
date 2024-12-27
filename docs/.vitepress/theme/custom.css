@@ -1,0 +1,45 @@
+/* 整体配色改成绿色 */
+:root {
+    --vp-c-green-1: #52b788;
+    --vp-c-green-2: #52b788;
+    --vp-c-green-3: #52b788;
+    --vp-c-green-soft: rgba(16, 185, 129, 0.16);
+}
+/* 整体配色改成绿色（暗黑模式） */
+.dark {
+    --vp-c-green-1: #52b788;
+    --vp-c-green-2: #52b788;
+    --vp-c-green-3: #52b788;
+    --vp-c-green-soft: rgba(16, 185, 129, 0.16);
+}
+/* 整体配色改成绿色 */
+:root {
+    --vp-c-brand-1: var(--vp-c-green-1);
+    --vp-c-brand-2: var(--vp-c-green-2);
+    --vp-c-brand-3: var(--vp-c-green-3);
+    --vp-c-brand-soft: var(--vp-c-green-soft);
+}
+:root {
+  /* 设置主题字体颜色 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+
+  /* 设置右图像渐变 */
+  --vp-home-hero-image-background-image: linear-gradient( -45deg, #6a00f4 30%, #ffffff 70% );
+  --vp-home-hero-image-filter: blur(130px);
+}
+
+/* 引用块配色 */
+.vp-doc blockquote {
+  background-color: #ecf8f3;
+  border-left: solid #42b983 !important;;
+}
+/* 引用块配色（暗黑模式） */
+.dark .vp-doc blockquote {
+  background-color: #4a5f53;
+  border-left: solid #b9eed6 !important;;
+}
+/* 引用块配色（暗黑模式字体） */
+.dark .vp-doc blockquote > p {
+  color: #92cab2;
+}
