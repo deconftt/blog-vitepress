@@ -58,7 +58,7 @@ export default defineConfig({
           {
             text: '2024',
             items: [
-              { text: '从自行车到gps', link: '/blog/从自行车到gps' },
+              //{ text: '从自行车到gps', link: '/blog/从自行车到gps' },
               { text: '麦轮', link: '/blog/麦轮' },
               { text: '你好2024', link: '/blog/你好2024' },
             ]
