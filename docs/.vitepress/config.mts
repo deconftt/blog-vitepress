@@ -52,6 +52,7 @@ export default defineConfig({
           {
             text: '2025',
             items: [
+              { text: 'codex', link: '/blog/codex' },
               { text: 'claude', link: '/blog/claude' },
               { text: '你好2025', link: '/blog/你好2025' },
             ]
