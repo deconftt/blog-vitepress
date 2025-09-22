@@ -60,7 +60,7 @@ export default defineConfig({
           {
             text: '2024',
             items: [
-              //{ text: '从自行车到gps', link: '/blog/从自行车到gps' },
+              { text: '从自行车到gps', link: '/blog/从自行车到gps' },
               { text: '麦轮', link: '/blog/麦轮' },
               { text: '你好2024', link: '/blog/你好2024' },
             ]
@@ -68,6 +68,8 @@ export default defineConfig({
           {
             text: '2023',
             items: [
+              { text: 'android开发常用命令', link: '/blog/android开发常用命令' },
+              { text: 'ubuntu自定义脚本', link: '/blog/ubuntu自定义脚本' },
               { text: 'VitePress博客搭建', link: '/blog/VitePress博客搭建' },
             ]
           },
