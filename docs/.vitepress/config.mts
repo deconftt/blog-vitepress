@@ -53,6 +53,7 @@ export default defineConfig({
             text: '2025',
             items: [
               { text: 'codex', link: '/blog/codex' },
+              { text: 'Ubuntu新增固态硬盘', link: '/blog/Ubuntu新增固态硬盘' },
               { text: 'claude', link: '/blog/claude' },
               { text: '你好2025', link: '/blog/你好2025' },
             ]
